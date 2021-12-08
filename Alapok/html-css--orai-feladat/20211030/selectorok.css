@@ -1,0 +1,34 @@
+/* Element selector (tipus) */
+p, div, img, table, tr, td, li, ul, ol, dl {}
+
+/* Id selector */
+/* Csak egy lehet belole */
+#valami-id {}
+
+/* Class selector (osztaly) */
+/* barmennyi lehet belole */
+.nagyon-class {}
+.nagyon-class-2 {}
+
+/*
+ * kombinalni
+*/
+p.nagyon-class {}
+div.nagyon-class {}
+
+p#valami-id {}
+div#valami-id {}
+
+.nagyon-class.meg-jobban-class {}
+
+.response.nagy.kek.piros {}
+
+/*  */
+
+div img {}
+
+p em {}
+
+body div p strong {}
+
+.container h2 {}

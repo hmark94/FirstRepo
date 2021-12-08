@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Órai feladat</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        .main-text {
+            line-height: 1.5;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            border-bottom: 1.5px solid aqua;
+        }
+
+        .main-text p {
+            margin: 0 0 1rem 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .main-text .first-pic {
+            float: left;
+            margin: 0 2rem 2rem 0;
+        }
+
+        .main-text .second-pic {
+            float: right;
+            margin: 0 0 2rem 2rem;
+        }
+
+        .main-text .third-pic {
+            margin: 0 auto;
+            display: block;
+        }
+
+        .main-text .text-title {
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        @media screen and (max-width:800px) {
+            .main-text .third-pic {
+                max-width: 200px;
+            }
+
+            .main-text img {
+                float: none;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+
+            .main-text img {
+                float: none;
+                display: block;
+                margin: 0 auto;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+        <div class="main-text">
+            <h1>Image left, flex</h1>
+            <img class="first-pic" src="http://placekitten.com/300/200" alt="">
+            <p class="text-title">Archaelogy</p>
+            <a href="#">Clothes From 8,000 Years Ago Were Made From Trees, New Reshearch Suggests</a>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                distribution
+                of letters, as opposed to using 'Content here, content here', making it look like readable English.
+            </p>
+            <a href="#">George Dvorsky</a>
+        </div>
+
+        <div class="main-text">
+            <h1>Image left, flex</h1>
+            <img class="second-pic" src="http://placekitten.com/300/200" alt="">
+            <p class="text-title">Archaelogy</p>
+            <a href="#">Clothes From 8,000 Years Ago Were Made From Trees, New Reshearch Suggests</a>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+            <a href="#">George Dvorsky</a>
+        </div>
+        <div class="main-text">
+            <h1>Image left, flex</h1>
+            <img class="third-pic" src="http://placekitten.com/800/400" alt="">
+            <p class="text-title">Archaelogy</p>
+            <a href="#">Clothes From 8,000 Years Ago Were Made From Trees, New Reshearch Suggests</a>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+            <a href="#">George Dvorsky</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

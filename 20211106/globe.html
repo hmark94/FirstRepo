@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>The Boston Globe</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .content {
+            background: lightblue;
+            width: 940px;
+            min-height: 100vh;
+            margin: 0 auto;
+            display: grid;
+            grid-template: 1fr 6fr 1fr / 1fr;
+        }
+
+        header {
+            background-color: rgb(250, 250, 250);
+            text-transform: uppercase;
+        }
+
+        header h1 {
+            text-align: center;
+        }
+
+        table {
+            vertical-align: bottom;
+        }
+
+        table a {
+            color: black;
+            text-decoration: none;
+        }
+
+        main {
+            background-color: rgb(255,255,255);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            border-top: 1px solid rgba(155, 155, 155, .4);
+            border-bottom: 1px solid rgba(155, 155, 155, .4);
+        }
+
+        footer {
+            background-color: rgb(255, 255, 255);
+        }
+
+        article {
+            width: 45%;
+            margin: 10px;
+            border-right: 1px solid rgba(155, 155, 155, .8);
+        }
+
+        .second_content img {
+            height: 100px;
+            width: 100px;
+            float: left;
+            left: 0;
+            padding: 0 5px 5px 5px;
+        }
+
+        .image {
+            vertical-align: middle;
+        }
+
+        .content_text {
+            float: left;
+            top: 0;
+            left: 0;
+            padding-right: 5px;
+        }
+
+        .content_title2,
+        .content_text2 {
+            width: 70%;
+            padding-left: 5px;
+        }
+
+        .second_content h2 {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        .cikk-link a {
+            color: grey;
+            text-decoration: none;
+        }
+
+        .content_link a {
+            color: grey;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:active {
+            background-color: rgba(0, 0, 0, .8);
+            color: white;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0);
+            color: white;
+        }
+
+        header tr td>button {
+            padding: 10px;
+        }
+
+        .content .searchbox {
+            float: right;
+        }
+
+        .content input {
+            float: left;
+            padding: 7px 50px 7px 7px;
+            border: none;
+            font-size: 16px;
+            margin-top: 5%;
+        }
+
+
+        button a {
+            padding: 10px;
+        }
+
+        .searchbox .search-button {
+            display: block;
+            float: right;
+            margin-top: 5%;
+            height: 20px;
+            width: 30px;
+        }
+
+        .searchbox .search-button button {
+            float: none;
+            display: block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 8px;
+        }
+
+        .fa {
+            display: block;
+            font: normal normal normal 14px/1 FontAwesome;
+            text-rendering: auto;
+        }
+
+        .fa-search:before {
+            content: "\f002";
+        }
+
+        .search-button button:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <h1>The boston globe</h1>
+            <table>
+                <tr>
+                    <td><button><a href="#">Sections</a></button></td>
+                    <td><button><a href="#">Today's paper</a></button></td>
+                    <td><button><a href="#">My saved</a></button></td>
+                    <div class="searchbox">
+                        <form><input type="text" placeholder="Search..."><div class="search-button"><button type="submit"><i class="fa fa-search"></i></button></div>
+                        </form>
+                    </div>
+                    ​
+                </tr>
+            </table>
+        </header>
+        <main>
+            <article id="main_article">
+                <figure>
+                    <img src="https://placekitten.com/200/200/" alt="Cica kep">
+                    <figcaption>Cicás kép</figcaption>
+                </figure>
+                <div class="content_title">
+                    <h2>Where does it come from?</h2>
+                </div>
+                <div class="content_text">
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                        classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+                        Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin
+                        words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
+                        classical literature, discovered the undoubtable source.</p>
+                </div>
+                <div class="content_link"><a href="#">Link a cikkhez</a></div>
+            </article>
+            <article class="second_content">
+                <div class="image"><img src="https://www.fillmurray.com/100/100" alt=""></div>
+                <div class="content_title2">
+                    <h2>Where can I get some?</h2>
+                </div>
+                <div class="content_text2">
+                    <div class="szoveg">There are many variations of passages of Lorem Ipsum available, but the
+                        majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even
+                        slightly
+                        believable.</div>
+                </div>
+                <div class="cikk-link"><a href="#">Itt olvashtó a cikk</a></div>
+            </article>
+            <article class="second_content">
+                <div class="image"><img src="https://www.fillmurray.com/90/90" alt=""></div>
+                <div class="content_title2">
+                    <h2>Where can I get some?</h2>
+                </div>
+                <div class="content_text2">
+                    <div class="szoveg">There are many variations of passages of Lorem Ipsum available, but the majority
+                        have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable.</div>
+                </div>
+                <div class="cikk-link"><a href="#">Itt olvashtó a cikk</a></div>
+            </article>
+            <article class="second_content">
+                <div class="image"><img src="https://www.fillmurray.com/80/80" alt=""></div>
+                <div class="content_title2">
+                    <h2>Where can I get some?</h2>
+                </div>
+                <div class="content_text2">
+                    <div class="szoveg">There are many variations of passages of Lorem Ipsum available, but the majority
+                        have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable.</div>
+                </div>
+                <div class="cikk-link"><a href="#">Itt olvashtó a cikk</a></div>
+            </article>
+            <article class="second_content">
+                <div class="image"><img src="https://www.fillmurray.com/85/85" alt=""></div>
+                <div class="content_title2">
+                    <h2>Where can I get some?</h2>
+                </div>
+                <div class="content_text2">
+                    <div class="szoveg">There are many variations of passages of Lorem Ipsum available, but the majority
+                        have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable.</div>
+                </div>
+                <div class="cikk-link"><a href="#">Itt olvashtó a cikk</a></div>
+            </article>
+            <article class="second_content">
+                <div class="image"><img src="https://www.fillmurray.com/95/95" alt=""></div>
+                <div class="content_title2">
+                    <h2>Where can I get some?</h2>
+                </div>
+                <div class="content_text2">
+                    <div class="szoveg">There are many variations of passages of Lorem Ipsum available, but the majority
+                        have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable.</div>
+                </div>
+                <div class="cikk-link"><a href="#">Itt olvashtó a cikk</a></div>
+            </article>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

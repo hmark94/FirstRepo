@@ -1,0 +1,13 @@
+@media screen and (min-width: 576px) and (max-width: 962px) {
+    .container {
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 450px;
+      gap: 10px;
+    }
+    .item {
+      width: auto;
+      max-width: 48%;
+    }
+
+  }

@@ -1,0 +1,93 @@
+body {
+    position: relative;
+    min-height: 100%;
+    line-height: 1;
+    color: black;
+    background: white;
+}
+body.postbored_sites_index{
+    text-align: center;
+    color: #333;
+    background-color: #3d3642;
+}
+
+body.postbored_sites_index #oldal_doboz{
+    width: 750px;
+    margin: auto;
+}
+
+body.postbored_sites_index #site_name {
+    float: left;
+}
+body.postbored_sites_index #linkek {
+    float: right;
+}
+
+body.postbored_sites_index header{
+    padding: 10px;
+    text-shadow: 0 0 1px rgb(0 0 0 / 20%);
+    background-color: #3498db;
+    letter-spacing: 2px;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    line-height: 1;
+    color: black;
+    background: white;
+}
+body.postbored_sites_index #linkek a{
+    font-size: 13px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 15px;
+}
+body.postbored_sites_index #lead {
+    margin-bottom: 20px;
+    line-height: 38px;
+    font-size: 13px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgb(0 0 0 / 20%) inset;
+}
+body.postbored_sites_index{
+    text-align: center;
+    color: #333;
+}
+body.postbored_sites_index a.submit_button{
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: #3498db;
+    border-radius: 3px;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 25%);
+    cursor: pointer;
+    padding: 4px;
+    line-height: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+body.postbored_sites_index #submit {
+    text-align: right;
+}
+body.postbored_sites_index .cimke{
+    text-align: center;
+    width: 90px;
+    padding: 5px 0;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 30%);
+    color: #fff;
+    background-color: #6e6d7a;
+}
+body.postbored_sites_index .doboz{
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgb(0 0 0 / 20%) inset;
+}

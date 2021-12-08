@@ -1,0 +1,31 @@
+body {
+  background-color: darkorchid;
+}
+div {
+  background-color: darkorange;
+}
+.responsive {
+  /* Elem szelessege */
+  /* width: 100%; */
+  /* ne legyen szelesebb, mint amilyen szeles a befoglalo elem */
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 300px;
+  float: left;
+  margin-right: 50px;
+}
+
+.container h2 {
+  color: indianred;
+}
+.container h2 a {
+  color: aquamarine
+}
+
+.sidebar {
+  width: 200px;
+  float: left;
+}

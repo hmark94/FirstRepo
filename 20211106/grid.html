@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat ablak</title>
+    <style>
+        .bongeszo {
+            position: relative;
+            border-collapse: collapse;
+        }
+
+        .chatablak {
+            border: rgba(104, 104, 104, .2) solid 2px;
+            height: 400px;
+            width: 300px;
+            position: absolute;
+            bottom: 1%;
+            right: 1%;
+            border-radius: 3px;
+        }
+
+        #picture img {
+            max-height: 100%;
+            max-width: 100%;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: block;
+            float: left;
+        }
+
+        .header #picture {
+            display: inline-block;
+            padding: 2px;
+        }
+
+        #name {
+            padding: 20px 160px 20px 0px;
+            float: right;
+
+        }
+
+        .header {
+            border-bottom: rgba(104, 104, 104, .2) solid 1.5px;
+            display: block;
+        }
+
+        .chatbottom {
+            position: fixed;
+            bottom: 2%;
+            right: 1.1%;
+            left: 67.4%;
+            border-top: rgba(104, 104, 104, .2) solid 2px;
+        }
+
+
+        #szoveg,
+        #gomb {
+            padding: 10px;
+            float: left;
+            border-radius: 5px;
+        }
+
+        .container {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 30px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .darker {
+            border-color: rgb(118, 211, 248);
+            background-color: rgb(118, 211, 248);
+        }
+
+        .container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .container img {
+            float: left;
+            max-width: 60px;
+            width: 100%;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        .container img.right {
+            float: right;
+            margin-left: 20px;
+            margin-right: 0;
+        }
+
+        .time-right {
+            float: right;
+            color: #aaa;
+        }
+
+        .time-left {
+            float: left;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="bongeszo">
+        <p>Böngésző</p>
+    </main>
+
+    <div class="chatablak">
+
+        <div class="header">
+            <div id="picture"><img src="https://www.fillmurray.com/200/300" alt="profilkep"></div>
+            <div id="name">Bill Murray</div>
+        </div>
+
+        <div class="container">
+            <img src="https://placekitten.com/50/50" alt="Avatar">
+            <p>Szia. Mizu?</p>
+            <span class="time-right">11:00</span>
+        </div>
+
+        <div class="container darker">
+            <img src="https://placekitten.com/30/30" alt="Avatar" class="right">
+            <p>Hello! Velem minden rendben! És veled?</p>
+            <span class="time-left">11:01</span>
+        </div>
+
+
+        <div class="chatbottom">
+            <div id="szoveg"><input type="text" placeholder="Ide írd a szöveget!"></div>
+            <div id="gomb"><input type="button" value="Küldés!"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

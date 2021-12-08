@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        body {
+            margin: 40px auto;
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        input[type=tel],
+        input[type=email] {
+            width: 200px;
+            padding: 12px 20px;
+            margin: 8px 8px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+        }
+
+        .btn {
+            width: 90%;
+            margin: 5px 5%;
+        }
+
+        .window {
+            height: 600px;
+            width: 80%;
+            border: 1px solid black;
+            border-radius: 2px;
+            margin: auto;
+            padding: 15px;
+            max-width: 450px;
+            max-height: 600px;
+            background-color: rgb(226, 225, 225);
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .row label {
+            margin-bottom: 1em;
+            flex-grow: 1;
+        }
+
+        @media screen and (min-width: 768px) {
+            .row {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="window">
+        <form>
+            <div class="row">
+                <div class="name">
+                    <div><label for="fname">Name</label></div>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <div class="comp">
+                    <div><label for="company">Company</label></div>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="tele">
+                    <div><label for="tel">Telephone</label></div>
+                    <input type="tel" id="tel" name="tel">
+                </div>
+                <div class="email">
+                    <div><label for="email">Email</label></div>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="text">Message
+                    <textarea placeholder="Ide írd a szöveget"></textarea>
+                </div>
+                <div class="buton">
+                    <button class="btn" type="submit">Send!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

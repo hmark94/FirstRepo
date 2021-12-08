@@ -1,0 +1,61 @@
+body {}
+
+.responsive {
+  /* Elem szelessege */
+  width: 100%;
+  /* ne legyen szelesebb, mint amilyen szeles a befoglalo elem */
+  max-width: 100%;
+  height: auto;
+}
+
+.main {
+  width: 800px;
+}
+
+.container {
+  width: 450px;
+  float: left;
+  margin-right: 50px;
+}
+
+.sidebar {
+  width: 250px;
+  float: left;
+}
+
+.cikk {
+  margin-bottom: 30px;
+}
+
+.cikk .timestamp {
+  color: red;
+  text-align: left;
+  font-size: 12px;
+  margin: 0;
+}
+
+.cikk img {
+  width: 250px;
+  float: left;
+  margin-right: 15px;
+}
+
+.header {
+  background: url(./img/header-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  text-align: center;
+}
+
+.nagyon-class {
+  color: #fff;
+}
+
+.header a{
+  color: #fff;
+}
+
+.edda {
+  background-color: rgb(154, 154, 241);
+}

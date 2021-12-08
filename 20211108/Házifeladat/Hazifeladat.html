@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hum Creative</title>
+    <style>
+        body {
+            padding: 0 auto;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .grid-item {
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            height: 100vh;
+            display: grid;
+            grid-template: 48px 196px 70px 920px 70px 550px / 1fr;
+            grid-template-areas:
+                "header"
+                "picure"
+                "label"
+                "main"
+                "label2"
+                "footer";
+        }
+
+        .header {
+            background-color: grey;
+            grid-area: header;
+        }
+
+        .picture {
+            background-color: rgb(255, 80, 80);
+            /* grid-area: picture; */
+        }
+
+        .label {
+            background-color: rgb(173, 173, 173);
+            grid-area: label;
+            padding: 15px 50px 15px 50px;
+        }
+
+        .main {
+            background-color: rgb(173, 173, 173);
+            grid-area: main;
+            padding: 10px 50px;
+        }
+
+        .label2 {
+            background-color: rgb(173, 173, 173);
+            grid-area: label2;
+            padding: 10px 50px;
+        }
+
+        .footer {
+            background-color: rgb(173, 173, 173);
+            grid-area: footer;
+        }
+
+        .topnav {
+            background-color: rgb(43, 43, 43);
+            overflow: hidden;
+        }
+
+        .topnav a {
+            float: right;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+
+        .topnav #toptitle {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px 14px 50px;
+            font-size: 17px;
+            text-transform: uppercase;
+        }
+
+        .grid-item-picture {
+            position: relative;
+            text-align: center;
+            background-color: rgb(255, 80, 80);
+        }
+
+        .grid-item-picture .picture-text {
+            text-transform: uppercase;
+            font-size: 13px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 1px 1px rgb(0, 0, 0);
+            letter-spacing: 0.5px;
+        }
+
+        .grid-item-picture .picture-text .uppercase {
+            font-size: 27px;
+            font-weight: 700;
+        }
+
+        .grid-item-label:after {
+            color: white;
+            border-left: 20px solid;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            display: inline-block;
+            content: '';
+            position: absolute;
+            right: -20px;
+        }
+
+        .grid-item-label {
+            background-color: white;
+            /* width: 150px; */
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+        }
+
+        .blocktext {
+            color: black;
+            font-weight: bold;
+            padding-left: 10px;
+            font-family: Arial;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            align-content: flex-start;
+            overflow: auto;
+            flex-direction: row;
+        }
+
+        .flex-container div {
+            width: 230px;
+            height: 300px;
+            margin: 0px;
+        }
+
+        .flex-container div img {
+            border: 7px solid white;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            align-content: flex-start;
+            overflow: auto;
+            flex-direction: row;
+        }
+
+        .flex-container .picture-title {
+            text-transform: uppercase;
+            color: white;
+            margin: 2px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 15px;
+        }
+
+        .flex-container .picture-comment {
+            text-transform: uppercase;
+            color: rgb(66, 66, 66);
+            margin: 2px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .footer-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            align-content: flex-start;
+            overflow: auto;
+            flex-direction: row;
+        }
+
+        .footer-flex img {
+            border: 7px solid white;
+        }
+
+        .footer-flex .arrow-left,
+        .footer-flex .arrow-right {
+            width: 100px;
+            height: 300px;
+            position: relative;
+        }
+
+        .arrow-right span,
+        .arrow-left span {
+            content: "\003E";
+            color: white;
+            font-weight: 700;
+            font-size: 50px;
+            position: absolute;
+            top: 210px;
+        }
+
+        .arrow-left span {
+            right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item header">
+            <div class="topnav">
+                <span id="toptitle">Hum Creative</span>
+                <a href="#">Blog</a>
+                <a href="#">About</a>
+                <a href="#">Work</a>
+            </div>
+        </div>
+        <div class="grid-item-picture">
+            <div class="picture-text">Why hello,<br>we're a
+                <span class="uppercase">design studio</span> focused on <br>
+                <span class="uppercase">creating</span> and developing <span class="uppercase">brands</span>!
+            </div>
+        </div>
+        <div class="label">
+            <div class="grid-item-label"><span class="blocktext">Case studies</span></div>
+        </div>
+        <div class="grid-item main">
+            <section class="flex-container">
+                <div class="flex-item1">
+                    <img src="http://placekitten.com/210/150" alt="">
+                    <p class="picture-title">The Shrive report</p>
+                    <p class="picture-comment">Identity, Branding, Web developement</p>
+                </div>
+                <div class="flex-item2">
+                    <img src="http://placekitten.com/210/150" alt="">
+                    <p class="picture-title">The Shrive report</p>
+                    <p class="picture-comment">Identity, Branding, Web developement</p>
+                </div>
+                <div class="flex-item3">
+                    <img src="http://placekitten.com/210/150" alt="">
+                    <p class="picture-title">The Shrive report</p>
+                    <p class="picture-comment">Identity, Branding, Web developement</p>
+                </div>
+                <div class="flex-item4">
+                    <img src="http://placekitten.com/210/150" alt="">
+                    <p class="picture-title">The Shrive report</p>
+                    <p class="picture-comment">Identity, Branding, Web developement</p>
+                </div>
+                <div class="flex-item5">
+                    <img src="http://placekitten.com/210/150" alt="">
+                    <p class="picture-title">The Shrive report</p>
+                    <p class="picture-comment">Identity, Branding, Web developement</p>
+                </div>
+                <div class="flex-item6">
+                    <img src="http://placekitten.com/210/150" alt="">
+                    <p class="picture-title">The Shrive report</p>
+                    <p class="picture-comment">Identity, Branding, Web developement</p>
+                </div>
+                <div class="flex-item7">
+                    <img src="http://placekitten.com/210/150" alt="">
+                    <p class="picture-title">The Shrive report</p>
+                    <p class="picture-comment">Identity, Branding, Web developement</p>
+                </div>
+                <div class="flex-item8">
+                    <img src="http://placekitten.com/210/150" alt="">
+                    <p class="picture-title">The Shrive report</p>
+                    <p class="picture-comment">Identity, Branding, Web developement</p>
+                </div>
+                <div class="flex-item9">
+                    <img src="http://placekitten.com/210/150" alt="">
+                    <p class="picture-title">The Shrive report</p>
+                    <p class="picture-comment">Identity, Branding, Web developement</p>
+                </div>
+            </section>
+        </div>
+        <div class="label2">
+            <div class="grid-item-label"><span class="blocktext">Eye Candy</span></div>
+        </div>
+        <div class="grid-item footer">
+            <div class="footer-flex">
+                <div class="arrow-left"><span>&#60;</span></div>
+                <dic class="footer-picture"><img src="http://placekitten.com/550/500" alt=""></dic>
+                <div class="arrow-right"><span>&#62;</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki - flex</title>
+    <style>
+        .flex-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        .flex-container1,
+        .flex-container2 {
+            display: block;
+            line-height: 1.6;
+            max-width: 80%;
+            margin: 2% auto;
+        }
+
+        .article-text {
+            padding: 1.5%;
+        }
+
+        .flex-container1 {
+            background-color: rgb(69, 231, 177);
+        }
+
+        .flex-container2 {
+            background-color: rgb(103, 190, 248);
+        }
+
+        img {
+            max-width: 120px;
+        }
+
+        .article-title {
+            font-weight: 700;
+            border: 1px solid;
+            margin: 2%;
+            padding: 1%;
+        }
+
+        .box1 {
+            background-color: rgb(57, 187, 144);
+            border-color: rgb(57, 187, 144);
+        }
+
+        .box2 {
+            background-color: rgb(73, 142, 189);
+            border-color: rgb(73, 142, 189);
+        }
+
+        .image-right {
+            float: right;
+            padding: 2%;
+        }
+
+        .links li {
+            display: inline;
+            padding: 1%;
+        }
+
+        @media only screen and (min-width:600px) {
+            .flex-wrapper {
+                flex-direction: row;
+            }
+
+            .flex-container1,
+            .flex-container2 {
+                margin: 1%;
+                min-width: 48%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-wrapper">
+        <div class="flex-container1">
+            <div class="article-title box1">From today's featured article</div>
+            <div class="article-text">
+                <article>The Transcaucasian Democratic Federative Republic (TDFR) was a short-lived state in the
+                    Caucasus that included most of the territory of present-day Armenia, Azerbaijan and Georgia, and
+                    parts of Russia and Turkey. The region was part of the Russian Empire, but as this dissolved in 1917
+                    with the February and October Revolutions the Transcaucasian Commissariat took over in
+                    Transcaucasia. In March 1918, as the First World War continued, the Commissariat initiated
+                    unsuccessful peace talks with the Ottoman Empire, which had invaded the region. Russia withdrew from
+                    the war later that month, conceding parts of the Transcaucasus to the Ottomans. Faced with an
+                    Ottoman offensive, on 22 April 1918 the Commissariat dissolved itself and established the TDFR. The
+                    Ottoman Empire immediately recognized the TDFR, which directed its legislature, the Seim, to hold
+                    peace talks. These broke down and, fearing fresh Ottoman attacks, Georgian delegates in the Seim
+                    declared independence on 26 May. Armenia and Azerbaijan each declared themselves independent on 28
+                    May, ending the federation.</article>
+            </div>
+            <div class="links">
+                <ul>
+                    <li>Recently featured:</li>
+                    <li><a href="#">Interstate 82</a></li>
+                    <li><a href="#">Cimoliopterus</a></li>
+                    <li><a href="#">Operation Grapple</a></li>
+                </ul>
+            </div>
+            <div class="article-title box1">Did you know ...</div>
+            <img class="image-right" src="http://placekitten.com/120/170" alt="">
+            <div class="article-text">
+                <ul>
+                    <li>... that Anne Saxelby (pictured) was a pioneer in promoting American artisanal cheese?</li>
+                    <li>... that even though Australian citizens are no longer British subjects, they can still vote in
+                        elections and stand for parliament in the United Kingdom?</li>
+                    <li>... that Samsi Sastrawidagda, Indonesia's first finance minister, once leased the veranda of
+                        future president Sukarno's house for his accountant's office?</li>
+                    <li>... that the RADCAL satellite, designed to have a three-year lifespan, operated for almost
+                        twenty?</li>
+                    <li>... that the philosopher Emil Utitz, a classmate of Franz Kafka, became the head librarian of
+                        Theresienstadt Ghetto?</li>
+                    <li>... that none of the six then-living CCNY players were interviewed for the 1998 documentary film
+                        City Dump: The Story of the 1951 CCNY Basketball Scandal?</li>
+                    <li>... that New Zealand association football coach Olli Harder has worked in the US, China, Norway
+                        and England?</li>
+                    <li>... that Miller's Anatomy of the Dog, a textbook dedicated to canines, was found by a specialist
+                        feline publication to be bereft of information about cats?</li>
+                </ul>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#">Archive</a></li>
+                    <li><a href="#">Start a new article</a></li>
+                    <li><a href="#">Nominate an article</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flex-container2">
+            <div class="article-title box2">In the news</div>
+            <img class="image-right" src="http://placekitten.com/120/170" alt="">
+            <div class="article-text">
+                <ul>
+                    <li>Former South African president F. W. de Klerk (pictured), who negotiated the end of apartheid
+                        with Nelson Mandela, dies at the age of 85.</li>
+                    <li>SpaceX launches four astronauts on the Crew-3 mission to the International Space Station.</li>
+                    <li>In stock car racing, Kyle Larson wins the NASCAR Cup Series championship.</li>
+                    <li>Kenyans Albert Korir and Peres Jepchirchir win the New York City Marathon men's and women's
+                        races.</li>
+                </ul>
+            </div>
+            <div class="article-footer"></div>
+            <div class="links">
+            </div>
+            <div class="article-title box2">On this day</div>
+            <img class="image-right" src="http://placekitten.com/120/170" alt="">
+            <div class="article-text">
+                <ul>
+                    <li>565 – Justin II became Byzantine emperor, having allegedly been chosen by his uncle Justinian I
+                        as his successor on his deathbed.</li>
+                    <li>1889 – Brazilian emperor Pedro II was overthrown in a coup led by Deodoro da Fonseca, while the
+                        country was proclaimed a republic.</li>
+                    <li>1922 – Fountain of Time, in Chicago's Washington Park, was dedicated as a tribute to 100 years
+                        of peace between the United States and Great Britain following the Treaty of Ghent.</li>
+                    <li>1943 – The Holocaust: Heinrich Himmler ordered that Romanies were to be put "on the same level
+                        as Jews and placed in concentration camps".</li>
+                    <li>1988 – The Soviet Buran spacecraft (pictured), a reusable vehicle built in response to NASA's
+                        Space Shuttle program, was launched, uncrewed, on its only flight.</li>
+                </ul>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#">Malo</a></li>
+                    <li><a href="#">Sara Josephine Baker</a></li>
+                    <li><a href="#">Margaret Mead</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
