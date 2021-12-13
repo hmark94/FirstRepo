@@ -110,7 +110,7 @@ function filterByNameCallback(myPhoneBook, predicate) {
     } return tomb;
 }
 //console.log(
-    filterByNameCallback(myPhoneBook, function (name) { return name === 'Mark' }),
+filterByNameCallback(myPhoneBook, function (name) { return name === 'Mark' }),
     filterByNameCallback(myPhoneBook, function (tomb) { return tomb.name === 'Mark' }),
     filterByNameCallback(myPhoneBook, function (tomb) { return tomb.mobile === 36701234567 })
 //);
@@ -154,3 +154,62 @@ function formatPhoneNumber(mobile) {
 }
 
 // console.log(formatPhoneNumber(36701234567));
+
+function bagginsok(phoneBook) {
+    let hobbitkak = [];
+    for (let i = 0; i < phoneBook.length; i++) {
+        if (phoneBook[i].name.includes('Baggins')) {
+            hobbitkak.push(phoneBook[i]);
+        }
+    }
+    return hobbitkak;
+}
+
+// console.log(bagginsok(myPhoneBook));
+
+let duplicates = [
+    { name: 'Mr. 1', mobile: 36301234567 },
+    { name: 'Mr. 2', mobile: 36301234567 },
+    { name: 'Mr. 3', mobile: 36301234567 },
+    { name: 'Ms. 1', mobile: 36301234568 },
+    { name: 'Ms. 2', mobile: 36301234568 },
+    { name: 'Ms. 3', mobile: 36301234568 },
+    { name: 'Mrs. 1', mobile: 36301234569 }
+];
+// console.log(number = duplicates[i].mobile)
+debugger;
+function duplicated(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        number = arr[i].mobile;
+/*     for (let j = 0; j < arr.length; j++) {
+        if (number === arr[j].mobile) {
+            delete arr[j];
+        }
+    }*/
+    } 
+}
+console.log(duplicated(duplicates));
+
+
+/* let duplicated = {};
+let hasDuplicates = duplicates.some(function (currentObject) {
+
+    if (duplicated.hasOwnProperty(currentObject.mobile)) {
+        // Current name is already seen
+        return true;
+    }
+
+    // Current name is being seen for the first time
+    return (duplicated[currentObject.mobile] = false);
+});
+console.log(duplicated); */
+
+/* function duplicated(arr) {
+    for (let i = 0; i < duplicates.length; i++) {
+        let sameNumbers = duplicates.filter(contact => contact.mobile === [i].mobile);
+        sameNumbers =+ [i].mobile;
+        return sameNumbers;
+    }
+};
+console.log(duplicated(duplicates)); */
+
