@@ -45,7 +45,7 @@ class Animal {
     }
 
     walk() {
-        console.log(this.animalName+' sétál!');
+        console.log(this.animalName + ' sétál!');
     }
 
     setName(nameOfAnimal) {
@@ -93,3 +93,44 @@ class Fruit extends Plant { //örökli a Plant objektum propertyjeit
     fruitType;
 }
 
+class Szemely {
+    #nev;
+    #kor;
+    constructor(nev, kor) {
+        this.#nev = nev;
+        this.#kor = kor;
+    }
+
+    get kora() {
+        return this.#kor;
+    }
+    set kora(newKor) {
+        this.#kor = newKor;
+    }
+    get neve() {
+        return this.#nev;
+    }
+    set neve(newNev) {
+        this.#nev = newNev;
+    }
+    kiir2() {
+        console.log(this.#nev, this.#kor)
+    }
+}
+
+let s1 = new Szemely('Mark', 27);
+console.log(s1);
+
+class Alkalmazott extends Szemely {
+    #beosztott;
+    constructor(name, age, beosztott) {
+        super(name, age);
+        this.#beosztott = beosztott;
+    }
+    kiir() {
+        console.log(this.neve, this.kora, this.#beosztott)
+    }
+}
+let a1 = new Alkalmazott('Dávid', 28, "Dolgozó")
+console.log(a1);
+a1.kiir();
