@@ -109,7 +109,7 @@ let kisallatok = [
 
 /* console.log(kisallatok); */
 
-// 14. feladat 
+// 14. feladat 8p
 
 function tombE(arr) {
     if (!Array.isArray(arr)) {
@@ -124,7 +124,7 @@ function tombE(arr) {
 /* console.log(tombE("tomb"));
 console.log(tombE([1, 2, 3])); */
 
-// 15. feladat
+// 15. feladat 10p
 
 class Konyv {
     constructor(cim, isbn, szerzo) {

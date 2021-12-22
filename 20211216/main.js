@@ -105,22 +105,34 @@ let s1 = new Counter(10, 2, false);
 
 class UrlHistory {
     urlList = [];
+    #actualIndex;
+
     constructor(url) {
         this.urlList.push(url);
+        this.#actualIndex = 0;
     }
 
     go(url) {
         this.urlList.push(url);
+        this.#actualIndex = this.urlList.length - 1;
     }
     back() {
-
+        if (this.#actualIndex >= 0) {
+            return this.urlList[--this.#actualIndex];
+        }
+        console.log('nincs több url');
     }
     forward() {
-
+        if (this.#actualIndex < this.urlList.length - 1) {
+            return this.urlList[++this.#actualIndex]
+        }
+        console.log('nincs több url');
     }
     reset() {
         this.urlList = [];
+        this.#actualIndex = -1;
     }
 }
 
 let urlHistory = new UrlHistory('https://google.com/')
+

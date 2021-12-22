@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body id="myBodyId">
+    <div id="elso_div"></div>
+    <div class="diven_belul"></div>
+    <div>
+        <p>Ez a szöveg!</p>
+        <p>Ez is egy szöveg!</p>
+    </div>
+
+    <script>
+        let p = document.querySelector('p');
+        console.log(p);
+
+
+        let cl = document.querySelector('.diven_belul');
+        console.log(cl);
+
+        let iD = document.querySelector('#elso_div');
+        console.log(iD);
+
+        let divP = document.querySelector('div:nth-child(3)');
+        console.log(divP);
+
+        let divOsszesP = divP.querySelectorAll('p');
+        console.log(divOsszesP);
+
+        let bodyElem = document.querySelector('#myBodyId');
+        console.log(bodyElem.id);
+        bodyElem.id = "NewBodyID";
+        console.log(bodyElem.id);
+    </script>
+</body>
+
+</html>
