@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modulzáró - [NÉV]</title>
+</head>
+
+<body>
+  <script>
+    { // 0. feladat eleje
+      console.log('=== 0. feladat ===');
+      console.log('Hatala Márk');
+    } // 0. feladat vége
+
+    { // 1. feladat
+      console.log('=== 1. feladat ===');
+      let admin;
+      let name;
+      name = 'John';
+      admin = name;
+      console.log(admin);
+    } // 1. feladat vége
+
+    { // 2. feladat
+      console.log('=== 2. feladat ===');
+      let num = 4;
+      console.log(num);
+      num += 3;
+      console.log(num);
+    } // 2. feladat vége
+
+    { // 3. feladat
+      console.log('=== 3. feladat ===');
+      let foo;
+      foo = true;
+      console.log(!foo);
+    } // 3. feladat vége
+
+    { // 4. feladat
+      console.log('=== 4. feladat ===');
+      let falsy = ['undefined', 'null', 'NaN', 0, '""', 'false'] //(empty string)
+      console.log(falsy);
+    } // 4. feladat vége
+
+    { // 5. feladat
+      console.log('=== 5. feladat ===');
+      console.log(parseInt("6"));
+      console.log(Number("6"));
+      console.log(parseFloat("6"));
+      console.log(Math.floor("6"));
+
+      console.log(Number("6.66"));
+      console.log(parseFloat("6.66"));
+
+      console.log(String(6));
+
+      console.log(Boolean(""));
+      console.log(!"");
+    } // 5. feladat vége
+
+    { // 6 feldat
+      console.log('=== 6 feldat ===');
+
+      let dices = ['D4', 'D6', 'D8', 'D10', 'D12', 'D20'];
+      console.log(dices.length);
+    } // 6 feldat vége
+
+    { // 6.1 feladat
+      console.log('=== 6.1 feladat ===');
+
+      dices = ['D4', 'D6', 'D8', 'D10', 'D12', 'D20'];
+      dices.push('D100');
+      dices.unshift('D2');
+      console.log(dices.length);
+    } // 6.1 feladat vége
+
+    { // 7. feladat
+      console.log('=== 7. feladat ===');
+
+      let kockak = {
+        D4: "tetraéder",
+        D6: "hexaéder",
+        D8: "oktaéder",
+        D10: "dodekaéder",
+        D12: "pentagonális antidipiramis",
+        D20: "ikozaéder"
+      }
+
+      console.log(kockak['D12']);
+      console.log(kockak.D12);
+    } // 7. feladat vége
+
+    { // 8. feladat
+      console.log('=== 8. feladat ===');
+      let doboKocka = "pentagonális antidipiramis";
+      let char1 = doboKocka[1];
+      let char2 = doboKocka[14];
+      let char3 = doboKocka[20];
+      let char4 = doboKocka[23];
+
+      let ertelmesSzo = char1.concat(char2, char3, char4);
+      console.log(ertelmesSzo);
+    } // 8. feladat vége
+
+    { // 9. feladat
+      console.log('=== 9. feladat ===');
+      let doboKocka_ = "pentagonális antidipiramis"
+      let arr = [];
+
+      arr = doboKocka_.split('');
+      //console.log(arr);
+
+      for (let i = 0; i < doboKocka_.length; i += 2) {
+        console.log(doboKocka_[i]);
+      }
+    } // 9. feladat vége
+
+    { // 10. feladat
+      console.log('=== 10. feladat ===');
+
+      // DONE
+
+    } // 10. feladat vége
+
+    { // 11. feladat
+      console.log('=== 11. feladat ===');
+
+      let kiir = function (param) {
+        console.log(param);
+      }
+      kiir("Hello Bello!");
+      kiir("Ezt is kiírja!");
+    } // 11. feladat vége
+
+    { // 12. feladat
+      console.log('=== 12. feladat ===');
+
+      let max = function (num1, num2) {
+        if (num1 > num2) {
+          return num1;
+        } return num2;
+      }
+      console.log(max(5, 10));
+      console.log(max(10, 5));
+    } // 12. feladat vége
+
+    { // 12.1 feladat
+      console.log('=== 12.1 feladat ===');
+
+      let max = function (num1, num2) {
+        if (num2 === undefined) {
+          return num1;
+        }
+        if (num1 > num2) {
+          return num1;
+        } return num2;
+      }
+
+      console.log(max(5, 10));
+      console.log(max(10, 5));
+      console.log(max(10));
+    } // 12.1 feladat vége
+
+    { // 12.2 feladat
+      console.log('=== 12.2 feladat ===');
+
+      let max = function (num1, num2) {
+        if (isNaN(num1) || isNaN(num2)) {
+          return null;
+        } else if (typeof num1 === "string" || typeof num2 === "string") {
+          return null;
+        }
+        if (num1 > num2) {
+          return num1;
+        } return num2;
+      }
+
+      console.log(max(5, 10));
+      console.log(max(10, 5));
+      console.log(max(10));
+      console.log(max());
+      console.log(max('1', '2'));
+    } // 12.2 feladat vége
+
+    { // 13. feladat
+      console.log('=== 13. feladat ===');
+      let divisibleBy = [];
+
+      /*       let oszthato = function (variable) {
+              if (variable % 3 === 0 && variable % 7 === 0) {
+                return variable;
+              }
+            } */
+      let oszthato = function () {
+        for (let i = 1; i <= 10000; i++) {
+          if (i % 3 === 0 && i % 7 === 0) {
+            divisibleBy.push(i);
+          }
+        } return divisibleBy;
+      }
+      console.log(oszthato().length);
+    } // 13. feladat vége
+
+    { // 13.1 feladat
+      console.log('=== 13.1 feladat ===');
+      let divisibleBy = [];
+      let oszthatoMinMax = function (min, max) {
+        for (let i = min; i <= max; i++) {
+          if (i % 3 === 0 && i % 7 === 0) {
+            divisibleBy.push(i);
+          }
+        } return divisibleBy.length;
+      }
+      console.log(oszthatoMinMax(21, 210));
+    } // 13.1 feladat vége
+
+    { // 13.2 feladat
+      console.log('=== 13.2 feladat ===');
+
+      let divisibleBy = [];
+      let oszthatoMinMaxDb = function (min, max) {
+        for (let i = min; i <= max; i++) {
+          if (i % 3 === 0 && i % 7 === 0) {
+            divisibleBy.push(i);
+          }
+        } return divisibleBy;
+      }
+
+      console.log(oszthatoMinMaxDb(21, 210));
+    } // 13.2 feladat vége
+
+    { // 13.3 szorgalmi feladat (extra pontert)
+      console.log('=== 13.3 szorgalmi feladat ===');
+
+      let mindenreIsJo = function (min, max, callback) {
+        for (let i = min; i <= max; i++) {
+          if (callback) {
+            divisibleBy.push(i);
+          }
+        } return divisibleBy;
+      }
+    } // 13.3 szorgalmi feladat (extra pontert) vége
+
+    { // 14. feladat
+      console.log('=== 14. feladat ===');
+
+      class FilmekCl {
+        constructor(title, year, director, cast) {
+          this.title = title;
+          this.year = year;
+          this.director = director;
+          this.cast = cast;
+        }
+      }
+
+      const movie1 = new FilmekCl('Elfújta a szél', 1940, 'Victor Fleming', ['Clark', 'Vivien', 'Leslie']);
+      const movie2 = new FilmekCl('Vuk', 2017, 'Attila Dargay', ['Karak', 'Vuk', 'Tás']);
+      console.log(movie1.year);
+      console.log(movie2.cast.reverse());
+    } // 14. feladat vége
+
+    { // 15. feladat
+      console.log('=== 15. feladat ===');
+
+      let phoneBook = [
+        {
+          name: 'Aladár',
+          pnumber: '06201234567',
+        },
+        {
+          name: 'Béla',
+          pnumber: '06307654321',
+        },
+        {
+          name: 'Jakab',
+          pnumber: '0620000000',
+        },
+        {
+          name: 'Hedvig',
+          pnumber: '06603571500',
+        },
+        {
+          name: 'Janka',
+          pnumber: '06704561230',
+        }
+      ]
+
+        let searchInBook = function(phonebook, telnumber) {
+          for(let i = 0; i < phonebook.length; i++) {
+            if(telnumber === phonebook[i].pnumber) {
+              return phonebook[i];
+            } 
+          } return null;
+        }
+
+        console.log(searchInBook(phoneBook, '0620000000'));
+        console.log(searchInBook(phoneBook, '0630000000'));
+    } // 15. feladat vége
+
+    { // 16. feladat
+      console.log('=== 16. feladat ===');
+
+      class ShapeCl {
+        constructor(coorX, coorY) {
+          this.coorx = coorX;
+          this.coory = coorY;
+        }
+
+        getPosition() {
+          let posi = [this.coorx, this.coory];
+          return posi;
+        }
+      }
+
+      class Rectangle extends ShapeCl {
+        constructor(coorX, coorY, sideA, sideB) {
+          super(coorX, coorY);
+          this.sideA = sideA;
+          this.sideB = sideB;
+        }
+      }
+
+      class Circle extends ShapeCl {
+        constructor(coorX, coorY, r) {
+          super(coorX, coorY);
+          this.r = r;
+        }
+
+        calcPerimeter() {
+          let perimeter = 2 * this.r * Math.PI;
+          return perimeter;
+        }
+      }
+
+      let teglalap = new Rectangle(0, 0, 100, 50);
+      console.log(teglalap);
+      let kor = new Circle(10, 20, 11);
+      console.log(kor);
+      console.log(`Kör kerülete: ${kor.calcPerimeter()}`);
+      console.log(`Kör koordinátái: ${kor.getPosition()}`);
+
+    } // 16. feladat vége
+  </script>
+</body>
+
+</html>
