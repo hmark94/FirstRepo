@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button">Hello click!</button>
+    <button type="button" onClick="clickHandler2();">Másik button</button>
+    <button type="button">harmadik button</button>
+    <button type="button" class="button4">negyedik</button>
+
+    <script>
+        let counter = 0;
+        function clickHandler() {
+            console.log('click!')
+        }
+        function clickHandler2() {
+            console.log('ez egy másik click!')
+        }
+
+        let btn = document.querySelector('button');
+
+        let btn3 = document.querySelector('button3');
+        let btn4 = document.querySelector('.button4');
+
+        btn.addEventListener('click', clickHandler);
+
+        /* let clickCounter = function () {
+            return counter++;
+        } */
+        
+        btn4.addEventListener('click', function () {
+            return counter++;
+        }
+        );
+        btn4.textContent = `Negyedik gomb ${counter}`;
+        //btn.removeEventListener('click', clickHandler);
+    </script>
+</body>
+
+</html>

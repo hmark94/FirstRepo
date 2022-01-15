@@ -96,10 +96,10 @@
     { // 8. feladat
       console.log('=== 8. feladat ===');
       let doboKocka = "pentagonális antidipiramis";
-      let char1 = doboKocka[1];
-      let char2 = doboKocka[14];
-      let char3 = doboKocka[20];
-      let char4 = doboKocka[23];
+      let char1 = doboKocka[0];
+      let char2 = doboKocka[13];
+      let char3 = doboKocka[19];
+      let char4 = doboKocka[22];
 
       let ertelmesSzo = char1.concat(char2, char3, char4);
       console.log(ertelmesSzo);
@@ -189,7 +189,7 @@
       console.log('=== 13. feladat ===');
       let divisibleBy = [];
 
-      /*       let oszthato = function (variable) {
+      /* let oszthato = function (variable) {
               if (variable % 3 === 0 && variable % 7 === 0) {
                 return variable;
               }
@@ -234,14 +234,16 @@
 
     { // 13.3 szorgalmi feladat (extra pontert)
       console.log('=== 13.3 szorgalmi feladat ===');
+      
+     /* let oszthatoSzamokkal = (num1, num2) => i % num1 === 0 && i % num2 === 0;
 
       let mindenreIsJo = function (min, max, callback) {
         for (let i = min; i <= max; i++) {
-          if (callback) {
-            divisibleBy.push(i);
-          }
-        } return divisibleBy;
+            tomb.push(i);
+        } return tomb.filter(callback);
       }
+      console.log(mindenreIsJo(1, 100, oszthatoSzamokkal(2, 5)));  */
+
     } // 13.3 szorgalmi feladat (extra pontert) vége
 
     { // 14. feladat
@@ -335,10 +337,10 @@
         }
       }
 
-      let teglalap = new Rectangle(0, 0, 100, 50);
-      console.log(teglalap);
-      let kor = new Circle(10, 20, 11);
-      console.log(kor);
+      const teglalap = new Rectangle(0, 0, 100, 50);
+      //console.log(teglalap);
+      const kor = new Circle(10, 20, 11);
+      //console.log(kor);
       console.log(`Kör kerülete: ${kor.calcPerimeter()}`);
       console.log(`Kör koordinátái: ${kor.getPosition()}`);
 
