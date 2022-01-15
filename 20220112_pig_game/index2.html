@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+.red {
+    background-color: red;
+}
+.border {
+    border: solid 2px black;
+}
+.bar-item {
+    text-decoration: none;
+}
+</style>
+<body>
+
+<div class="container">
+  <div class="bar">
+    <a href="#" class="bar-item tablink border red" onclick="openTab(event,'tab 1')">Tab 1</a>
+    <a href="#" class="bar-item tablink border" onclick="openTab(event,'tab 2')">Tab 2</a>
+    <a href="#" class="bar-item tablink border" onclick="openTab(event,'tab 3')">Tab 3</a>
+  </div>
+  
+  <div id="tab 1" class="container tab">
+    <h2>Tab 1</h2>
+    <p>Szöveg</p>
+  </div>
+
+  <div id="tab 2" class="container tab" style="display:none">
+    <h2>Tab 2</h2>
+    <p>Még több Szöveg</p> 
+  </div>
+
+  <div id="tab 3" class="container tab" style="display:none">
+    <h2>Tab 3</h2>
+    <p>Annál is több Szöveg</p>
+  </div>
+</div>
+
+<script>
+function openTab(event, tabName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" red", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  event.currentTarget.className += " red";
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume</title>
+    <style>
+        .btn {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin: 5% 5%;
+        }
+        #volume_up {
+            background-color: rgb(138, 138, 138);
+            font-size: 1.7rem;
+        }
+        #volume_down {
+            background-color: rgb(138, 138, 138);
+            font-size: 1.7rem;
+        }
+        #mute {
+            background-color: rgba(255, 0, 0, 0.274);
+            font-size: 1.7rem;
+        }
+
+        .symbol {
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+        }
+        #volume_height {
+            font-size: 2rem;
+        }
+        #volume_current {
+            font-size: 2rem;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <button class="btn" id="volume_down">🔉</button>
+    <button class="btn" id="volume_up">🔊</button>
+    <button class="btn" id="mute">🔇</button>
+    <div class="volume-text">
+        <span id="volume_height">Volume:</span>
+        <span id="volume_current"></span>
+    </div>
+
+    <script src="script_volume.js"></script>
+</body>
+
+</html>
