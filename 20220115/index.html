@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div class="last-item end">4</div>
+
+    <p>Ez a p elemem</p>
+
+    <table>
+        <tr>
+            <td>1. sor</td>
+            <td>2. sor</td>
+            <td>3. sor</td>
+            <td>4. sor</td>
+            <td>5. sor</td>
+        </tr>
+    </table>
+
+    <script>
+        /*  const formEl = document.querySelector('form');
+         const divAll = document.querySelectorAll('div');
+         const elsoLi = document.querySelector('ul > li');
+         const utolsoLi = document.querySelector('ul').lastElementChild; */
+
+        /* console.log(formEl);
+        console.log(divAll);
+        console.log(elsoLi);
+        console.log(utolsoLi); */
+        /////////////
+        const osszesDiv = document.querySelectorAll('div');
+        osszesDiv[1].id = 'second-item';
+        //console.log(osszesDiv);
+        /////////////
+        osszesDiv[osszesDiv.length - 1].classList.remove('end');
+        /////////////
+        let arr = ['p-item', 'paragraph'];
+
+        const pEl = document.querySelector('p');
+
+        for (let i = 0; i < arr.length; i++) {
+            pEl.classList.add(arr[i]);
+        }
+        ///////////
+        osszesDiv[osszesDiv.length - 1].style.position = "absolute";
+        osszesDiv[osszesDiv.length - 1].style.top = 0 + "px";
+        osszesDiv[osszesDiv.length - 1].style.left = 0 + "px";
+
+        ///////////
+        const tablazat = document.querySelectorAll('td');
+        //console.log(tablazat);
+
+        const table = function (sor) {
+            return tablazat[sor - 1];
+        }
+
+        //console.log(table(3));
+
+        //////////
+        //append - szulo elem végéhez ad hozzá
+        //prepend - szulo elem elejéhez ad hozzá
+
+        // before - megadott elem elé 
+        // after - megadott elem után
+
+        //////////
+        const parentEl = document.body;
+        const formEl = document.createElement('form');
+        const inputEl = document.createElement('input');
+        const buttonEl = document.createElement('button');
+        const imageEl = document.createElement('image');
+
+        //console.log(formEl);
+        inputEl.type = 'text';
+        buttonEl.innerText = 'Gomb';
+        imageEl.setAttribute('src', 'https://www.placecage.com/c/400/300');
+
+        parentEl.append(formEl);
+        parentEl.prepend(imageEl);
+
+        formEl.append(inputEl);
+        formEl.append(buttonEl);
+
+        /////////////////
+
+        
+    </script>
+</body>
+
+</html>
