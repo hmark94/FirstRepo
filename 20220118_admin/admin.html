@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin site</title>
+    <link rel="stylesheet" href="admin_style.css">
+</head>
+
+<body>
+    <div class="tab">
+        <button class="tablink" id="defaultTab" onclick="openTab(event, 'statistics')">Statisztika</button>
+        <button class="tablink" onclick="openTab(event, 'database')">Adatbázis</button>
+        <button class="tablink" onclick="openTab(event, 'gallery')">Galléria</button>
+    </div>
+
+    <div id="statistics" class="tabcontent">
+        <h3>Statisztika</h3>
+        <button onclick="refreshData()">🔃 Refresh</button><br>
+        <span id="numberOfUsers"></span><br>
+        <span id="numberOfAvatars"></span>
+    </div>
+
+    <div id="database" class="tabcontent">
+        <h3>Adatbázis</h3>
+        <div id="newData" class="newDataForm">
+            <span id="id"></span>
+            <input type="text" id="fullName" placeholder="Full Name">
+            <input type="text" id="userName" placeholder="Username">
+            <span id="avatar">Avatar</span><input type="checkbox" id="avatarBox">
+            <input type="email" id="email" placeholder="E-mail">
+            <button type="submit" value="submit" onclick="newElement()">Add new</button>
+            <button class="saveBtn visible" onclick="saveNewElement()">Save</button>
+        </div>
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Username</th>
+                <th>Avatar</th>
+                <th>E-mail</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="gallery" class="tabcontent">
+        <h3>Galléria</h3>
+    </div>
+
+    <script src="admin_script_fin.js"></script>
+</body>
+
+</html>
