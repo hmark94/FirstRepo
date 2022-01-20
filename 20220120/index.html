@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            background-color: rgba(255, 30, 0, 0.829);
+        }
+
+        .green {
+            background-color: rgba(0, 128, 0, 0.623);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <p>Éppen ezt szerkeszted:</p>
+        <span class="edit"></span>
+        <br>
+        <hr>
+    </div>
+
+    <div class="form">
+        <label id="uname">Felhasználó név:</label><input class="unameIn" type="text"><br>
+        <label id="email">E-mail:</label><input class="emailIn" type="email"><br>
+        <label id="fname">Teljes név:</label><input class="fnameIn" type="text">
+    </div>
+
+
+    <script>
+        'use strict';
+
+        const unameInEl = document.querySelector('.unameIn');
+        const unameSp = document.querySelector('#uname');
+
+        const emailInEl = document.querySelector('.emailIn');
+        const emailSp = document.querySelector('#email');
+
+        const fnameInEl = document.querySelector('.fnameIn');
+        const fnameSp = document.querySelector('#fname');
+
+        const editEl = document.querySelector('.edit');
+
+
+        unameInEl.addEventListener('focus', function () {
+            unameInEl.classList.add('red');
+            editEl.innerHTML = `${unameSp.innerHTML} ${unameInEl.value}`
+        })
+        unameInEl.addEventListener('blur', function () {
+            unameInEl.classList.remove('red');
+            unameInEl.classList.remove('green');
+            if(unameInEl.value != '') {
+                unameInEl.after('✅')
+            }
+        })
+        unameInEl.addEventListener('input', function () {
+            if (unameInEl.value != '') {
+                unameInEl.classList.add('green');
+            } else {unameInEl.classList.add('red');
+        unameInEl.classList.remove('green')};
+        })
+
+        emailInEl.addEventListener('focus', function () {
+            if (emailInEl === document.activeElement) {
+                emailInEl.classList.add('red');
+                editEl.innerHTML = `${emailSp.innerHTML} ${emailInEl.value}`
+            }
+        })
+
+        fnameInEl.addEventListener('focus', function () {
+            if (fnameInEl === document.activeElement) {
+                fnameInEl.classList.add('red');
+                editEl.innerHTML = `${fnameSp.innerHTML} ${fnameInEl.value}`
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
