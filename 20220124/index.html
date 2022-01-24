@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.
+        const fullName = function (...name) {
+            let fname = name.join(' ');
+            return fname;
+        }
+        console.log(fullName('John', 'Doe', 'Smith'));
+
+        //1.2
+        const fullName2 = function () {
+            let fname2 = Array.prototype.slice.call(arguments);
+            return fname2.join(' ');
+        }
+        console.log(fullName2('Johanna', 'Ortega'));
+
+        //2.
+        const capital = function (...string) {
+            const bigCap = string.map(name => name.toUpperCase());
+            return bigCap;
+        }
+        console.log(capital('lowercase', 'thisaswell', 'eziskisbetű'));
+
+        //3.
+        const add = function (...numbers) {
+            let sum = 0;
+            for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+            return sum;
+        };
+        console.log(add(1, 2, 3, 4, 5), add(10, 20, 30));
+
+        //Array.find
+            const even = function (...numbers) {
+            const found = numbers.find(number => number % 2);
+            return found
+        }
+        console.log(even(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+
+        //Array.filter
+        const even2 = function (...numbers) {
+            const found2 = numbers.filter(number => number % 2 === 0);
+            return found2
+        }
+        console.log(even2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+    </script>
+</body>
+
+</html>
