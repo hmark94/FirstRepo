@@ -40,18 +40,61 @@
         console.log(add(1, 2, 3, 4, 5), add(10, 20, 30));
 
         //Array.find
-            const even = function (...numbers) {
-            const found = numbers.find(number => number % 2);
-            return found
-        }
+        const even = (...numbers) => numbers.find(number => number % 2 === 0);
+
         console.log(even(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 
         //Array.filter
-        const even2 = function (...numbers) {
-            const found2 = numbers.filter(number => number % 2 === 0);
-            return found2
-        }
-        console.log(even2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+        const even2 = (...arrays) => arrays.filter(arr => arr.hasOwnProperty('id'));
+
+        console.log(even2({ 'id': '73', 'foo': 'bar' }, { 'id': '45', 'foo': 'cafe' }, { 'user': 'loo', 'contact': 'Li' }, { 'user': 'wao', 'member': 'Chao' }, { 'id': 0, 'foo': 'map' }));
+
+        //Array.filter 2
+        const filt = (num, ...arrays) => arrays.filter(arr => arr > num);
+
+        //forEach
+        let newArr = [];
+        const shallowCopy = source => {
+            let dest = [];
+            source.forEach(element => dest.push(element));
+            return dest;
+        };
+
+        //array.map
+        const trimStr = (...str) => str.map(el => el.trim());
+
+        console.log(trimStr('    Hello World       '));
+
+        //array.reduce
+        let cart = [
+            {
+                itemId: 1,
+                quantity: 2,
+                price: 120
+            },
+            {
+                itemId: 2,
+                quantity: 1,
+                price: 3
+            },
+            {
+                itemId: 3,
+                quantity: 3,
+                price: 43
+            },
+        ]
+        
+        console.log(cart.reduce((pValue, cValue) => {
+            let sum;
+            return {price: pValue.price + cValue.price,
+            quantity: pValue.quantity + cValue.quantity}
+        }));
+        
+
+        
+
+
+
     </script>
 </body>
 
