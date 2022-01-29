@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //spread array operator
+        const arr = [7, 8, 9];
+        const newArr = [1, 2, ...arr];
+        //console.log(newArr);
+
+        const str = 'Mark';
+        const nArr = [...str];
+        //console.log(nArr);
+
+
+        //rest parameter
+        const add = function (...numbers) {
+            let sum = 0;
+            for ( let i = 0; i < numbers.length; i++) sum += numbers[i];
+            //console.log(sum);
+        };
+
+        add(1, 2);
+        add(23, 45, 10, 6);
+        add(1, 2, 3, 4, 5, 6, 7, 8);
+
+        const x = [23, 5, 7];
+        add(...x);
+
+        //short circuiting (&&, ||)
+
+       /*  console.log(3 || 'Mark'); //first value is a truthy value
+        console.log('' || 'Mark');
+        console.log(true || 0);
+        console.log(undefined || null); */
+
+        //nullish operator
+
+        // const guestCorrect = restaurant.numGuests ?? 10 -> just null and undefined
+
+        /////// Coding challange
+
+        
+
+    </script>
+
+</body>
+
+</html>

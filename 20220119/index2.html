@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .info {
+            border: 1px solid grey;
+            background-color: white;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        .visible {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://picsum.photos/200/300" alt="">
+
+    <div class="info visible">
+        <p>Ez egy kép</p>
+        <img class="small_pic" src="https://picsum.photos/200/300" alt="">
+    </div>
+
+
+    <script>
+        const picEl = document.querySelector('img');
+        const infEl = document.querySelector('.info')
+
+        picEl.addEventListener('click', function (e) {
+            infEl.classList.toggle('visible');
+
+            infEl.style.left = e.pageX + 'px';
+            infEl.style.top = e.pageY + 'px';
+
+        })
+
+        document.addEventListener('keydown', function (e) {
+            (e.key === 'Escape') ? infEl.classList.add('visible') : null;
+        })
+    </script>
+</body>
+
+</html>

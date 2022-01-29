@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" rel="styles" />
+</head>
+
+<body>
+    <h1>Ide dolgozunk</h1>
+    <div>
+        <a href="#" id="modalOpen">Add new character</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Gender</td>
+            </tr>
+        </thead>
+        <tbody id="tBody"></tbody>
+    </table>
+    <div class="modal-background">
+        <div class="modal">
+            <div class="fejlec"><button class="modalClose">x</button></div>
+        </div>
+        <form class="form_modal">
+            <div class="form_body">
+                <div class="row_1">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" />
+                </div>
+                <div class="row_2">
+                    <div class="height_col">
+                        <label for="height">Height</label>
+                        <input type="number" id="height" />
+                    </div>
+                    <div class="mass_col">
+                        <label for="mass">Mass</label>
+                        <input type="number" id="mass" />
+                    </div>
+                </div>
+                <div class="row_3">
+                    <div class="hair_col">
+                        <label for="hair">Hair color</label>
+                        <input type="text" id="hair" />
+                    </div>
+                    <div class="skin_col">
+                        <label for="skin">Skin color</label>
+                        <input type="text" id="skin" />
+                    </div>
+                    <div class="eye_col">
+                        <label for="eye">Eye color</label>
+                        <input type="text" id="eye" />
+                    </div>
+                </div>
+                <div class="row_4">
+                    <label for="birth_year">Birth year</label>
+                    <input type="text" id="birth_year" />
+                </div>
+                <div class="row_5">
+                    <label for="gender">Gender</label>
+                    <select class="gender_select" name="gender">
+                        <option value="n/a">n/a</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="hermaphrodite">Hermaphrodite</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form_footer">
+                <button type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="src/data.js"></script>
+    <script src="src/index.js"></script>
+</body>
+
+</html>

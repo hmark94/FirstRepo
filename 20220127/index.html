@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let animals = ['dog', 'chicken', 'fish']
+        let moreAnimals = ['bird', ...animals, 'cat']
+        //console.log(moreAnimals);
+
+
+        const arrowfv = (string) => [...string];
+        //console.log(arrowfv('hello'));
+
+
+        const arrayMerge = (arr1, arr2) => arr3 = [...arr1, ...arr2];
+        //console.log(arrayMerge([1, 2, 3, 4], [9, 8, 7, 6, 5]));
+        //console.log(arrayMerge({id: 1,num: 2}, [9, 8, 7, 6, 5]));
+
+        const objectMerge = (obj1, obj2) => obj3 = { ...obj1, ...obj2 };
+        //console.log(objectMerge({fname: 'John', nickname: 'Doe'}, {jobtitle: 'developer', location: 'Norway'}));
+
+        const product = (a, b, c, d, e) => numbers = [a, b, c, d, e];
+
+
+        //convert to ES6
+        const product_ = (...products) => rest.filter((elem, index) => index < 5).reduce((acc, number) => acc * number, 1);
+
+        //computed property
+        /* const propName_ = prompt('Prop név');
+        const propValue_ = prompt('Prop érték');
+
+        const obj_ = {
+            [propName_]: propValue_ ,
+        }
+        console.log(obj_); */
+
+        const animalInfo = [
+            'name', 'Bloki', 'age', 12, 'color', 'brown'
+        ]
+
+        const animalObj = {};
+
+        for (let i = 0; i < animalInfo.length; i+=2) {
+            animalObj[animalInfo[i]] = animalInfo[i+1];
+        }
+        //console.log(animalObj);
+
+        
+
+
+    </script>
+</body>
+
+</html>
