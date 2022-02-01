@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve your seat!</title>
+    <style>
+        /*login page*/
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #403C3D;
+        }
+
+        .box {
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #bdbebf40;
+            text-align: center;
+            border-radius: 7px;
+        }
+        
+        .box label {
+            color: #BDBEBF;
+        }
+        
+        .showcase {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .box h3 {
+            color: #777EA6;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .box input[type="text"],
+        .box input[type="email"],
+        .box input[type="tel"] {
+            border: 0.5px solid #0D0D0D;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            padding: 14px 10px;
+            width: 200px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+        }
+
+        .box input[type="text"]:focus,
+        .box input[type="email"]:focus,
+        .box input[type="tel"]:focus {
+            width: 280px;
+            border-color: #7A7EBF;
+        }
+
+        .box button[type="submit"] {
+            border: 0.5px solid #7A7EBF;
+            background: #7A7EBF;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            padding: 14px 10px;
+            width: 200px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+        }
+
+        .box button[type="submit"]:focus {
+            width: 280px;
+            border-color: #7A7EBF;
+        }
+
+        .box button[type="submit"]:hover {
+            width: 280px;
+            border-color: #7A7EBF;
+        }
+
+        /*Reserver Page*/
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+        header {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            height: 20vh;
+        }
+        .header-text {
+            text-transform: uppercase;
+            font-size: 3.5em;
+            font-weight: 700;
+            letter-spacing: 8px;
+            color: white;
+            animation: text 2s 1;
+            display: block;
+            background-color: #403C3D;
+            position: relative;
+        }
+        .header-text2 {
+            font-size: 1.5em;
+            display: block;
+            color: #777EA6
+        }
+        @keyframes text {
+            0%{
+                color: #BDBEBF;
+                margin-bottom: -40px;
+            }
+            30%{
+                letter-spacing: 25px;
+                margin-bottom: -40px;
+            }
+            85%{
+                letter-spacing: 8px;
+                margin-bottom: -40px;
+            }
+        }
+
+        .left-sidebar {
+            border: 1px solid #BDBEBF;
+            background-color: #BDBEBF;
+            border-radius: 5px;
+            width: 30%;
+            max-width: 30vh;
+            height: 400px;
+            text-align: left;
+            padding: 2%;
+            overflow: hidden;
+            color: #777EA6;
+        }
+
+        .right-sidebar {
+            border: 1px solid #777EA6;
+            background-color: #777EA6;
+            width: 600px;
+            height: 500px;
+            border-radius: 5px;
+        }
+
+        .movie-container label {
+            color: white;
+            font-weight: 500;
+            padding: 5px;
+        }
+
+        .movie-container select {
+            border: 1px solid grey;
+            padding: 5px 15px;
+            margin-bottom: 40px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        .seat-container {
+            perspective: 1000px;
+            margin: 40px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .screen {
+            background: rgb(44, 44, 44);
+            height: 70px;
+            width: 300px;
+            margin: 15px 0;
+            transform: rotateX(-45deg);
+            box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+        }
+
+        .seat {
+            background-color: rgb(110, 110, 110);
+            height: 24px;
+            width: 30px;
+            margin: 3px;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            text-align: center;
+            font-size: .8rem;
+            color: white;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .occupied {
+            background-color: #BDBEBF;
+        }
+
+        .seat:not(.occupied):hover {
+            cursor: pointer;
+            transform: scale(1.2);
+            background-color: #819373;
+        }
+
+        .selected {
+            background-color: #819373;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="showcase">
+       <div class="video-container">
+            <video src="video.mp4" autoplay muted loop></video>
+        </div>
+
+        <form class="box" action="" method="">
+            <h3>A foglalás megkezdéséhez, adja meg adatait!</h3>
+            <label for="name"><b>Név:</b>
+                <input type="text" placeholder="Név" name="name" id="name" required></label><br>
+
+            <label for="email"><b>E-mail:</b>
+                <input type="email" placeholder="email@domain.com" name="email" id="email" required></label><br>
+
+            <label for="tel"><b>Telefonszám:</b>
+                <input type="tel" placeholder="Telefonszám" name="tel" id="tel" required></label><br>
+            <button type="submit">Elküld</button>
+        </form>
+
+    </section>
+
+    <!--After the login-->
+
+    <main class="landing-page hidden">
+        <header>
+            <span class="header-text">Movie Cinema</span>
+            <span class="header-text2">The Only Cinema in Town</span>
+        </header>
+        <div class="main-container">
+
+            <sidebar class="left-sidebar">
+                <div class="sidebar-header">
+                    <h3>Megadott adatok</h3>
+                    <hr>
+                </div>
+                <div class="data-box">
+                    <label>Név: </label><span id="data-name"></span><br>
+                    <label>E-mail: </label><span id="data-email"></span><br>
+                    <label>Telefonszám: </label><span id="data-tel"></span><br>
+                </div>
+                <hr>
+                <div class="reserved-tickets-box">
+                    <label>Helyek száma:</label><span id="reserved-seat"></span><br>
+                    <label>Ülőhelyek:</label><span id="seat-place"></span><br>
+                    <label>Ár:</label><span id="price-seat">0</span> Ft
+                </div>
+            </sidebar>
+
+
+            <sidebar class="right-sidebar">
+                <div class="movie-container">
+                    <label>Válassz filmet:</label>
+                    <select id="movie">
+                        <option value="1850">Don't Look Up!</option>
+                        <option value="1250">Lion King 5</option>
+                        <option value="1850">The Shawshank Redemption</option>
+                        <option value="1850">Fight Club</option>
+                        <option value="1250">Toy Story 5</option>
+                    </select>
+
+
+                    <div class="seat-container">
+                        <div class="screen"></div>
+                        <div class="row">
+                            <div class="row_letter">A</div>
+                            <div class="seat">1</div>
+                            <div class="seat">2</div>
+                            <div class="seat">3</div>
+                            <div class="seat">4</div>
+                            <div class="seat">5</div>
+                            <div class="seat">6</div>
+                            <div class="seat">7</div>
+                            <div class="seat">8</div>
+                            <div class="seat">9</div>
+                            <div class="seat">10</div>
+                        </div>
+                        <div class="row">
+                            <div class="row_letter">B</div>
+                            <div class="seat">1</div>
+                            <div class="seat">2</div>
+                            <div class="seat">3</div>
+                            <div class="seat occupied">4</div>
+                            <div class="seat occupied">5</div>
+                            <div class="seat">6</div>
+                            <div class="seat">7</div>
+                            <div class="seat">8</div>
+                            <div class="seat">9</div>
+                            <div class="seat">10</div>
+                        </div>
+                        <div class="row">
+                            <div class="row_letter">C</div>
+                            <div class="seat">1</div>
+                            <div class="seat">2</div>
+                            <div class="seat">3</div>
+                            <div class="seat">4</div>
+                            <div class="seat">5</div>
+                            <div class="seat">6</div>
+                            <div class="seat occupied">7</div>
+                            <div class="seat occupied">8</div>
+                            <div class="seat">9</div>
+                            <div class="seat">10</div>
+                        </div>
+                        <div class="row">
+                            <div class="row_letter">D</div>
+                            <div class="seat">1</div>
+                            <div class="seat">2</div>
+                            <div class="seat">3</div>
+                            <div class="seat">4</div>
+                            <div class="seat">5</div>
+                            <div class="seat">6</div>
+                            <div class="seat">7</div>
+                            <div class="seat">8</div>
+                            <div class="seat">9</div>
+                            <div class="seat">10</div>
+                        </div>
+                        <div class="row">
+                            <div class="row_letter">E</div>
+                            <div class="seat">1</div>
+                            <div class="seat">2</div>
+                            <div class="seat">3</div>
+                            <div class="seat occupied">4</div>
+                            <div class="seat occupied">5</div>
+                            <div class="seat">6</div>
+                            <div class="seat">7</div>
+                            <div class="seat">8</div>
+                            <div class="seat">9</div>
+                            <div class="seat">10</div>
+                        </div>
+                        <div class="row">
+                            <div class="row_letter">F</div>
+                            <div class="seat">1</div>
+                            <div class="seat">2</div>
+                            <div class="seat">3</div>
+                            <div class="seat">4</div>
+                            <div class="seat occupied">5</div>
+                            <div class="seat occupied">6</div>
+                            <div class="seat occupied">7</div>
+                            <div class="seat">8</div>
+                            <div class="seat">9</div>
+                            <div class="seat">10</div>
+                        </div>
+                    </div>
+                </div>
+            </sidebar>
+        </div>
+    </main>
+
+<script src="javascript.js"></script>
+</body>
+
+</html>

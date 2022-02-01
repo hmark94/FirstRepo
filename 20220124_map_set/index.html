@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.
+        const fullName = function (...name) {
+            let fname = name.join(' ');
+            return fname;
+        }
+        console.log(fullName('John', 'Doe', 'Smith'));
+
+        //1.2
+        const fullName2 = function () {
+            let fname2 = Array.prototype.slice.call(arguments);
+            return fname2.join(' ');
+        }
+        console.log(fullName2('Johanna', 'Ortega'));
+
+        //2.
+        const capital = function (...string) {
+            const bigCap = string.map(name => name.toUpperCase());
+            return bigCap;
+        }
+        console.log(capital('lowercase', 'thisaswell', 'eziskisbetű'));
+
+        //3.
+        const add = function (...numbers) {
+            let sum = 0;
+            for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+            return sum;
+        };
+        console.log(add(1, 2, 3, 4, 5), add(10, 20, 30));
+
+        //Array.find
+        const even = (...numbers) => numbers.find(number => number % 2 === 0);
+
+        console.log(even(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+
+        //Array.filter
+        const even2 = (...arrays) => arrays.filter(arr => arr.hasOwnProperty('id'));
+
+        console.log(even2({ 'id': '73', 'foo': 'bar' }, { 'id': '45', 'foo': 'cafe' }, { 'user': 'loo', 'contact': 'Li' }, { 'user': 'wao', 'member': 'Chao' }, { 'id': 0, 'foo': 'map' }));
+
+        //Array.filter 2
+        const filt = (num, ...arrays) => arrays.filter(arr => arr > num);
+
+        //forEach
+        let newArr = [];
+        const shallowCopy = source => {
+            let dest = [];
+            source.forEach(element => dest.push(element));
+            return dest;
+        };
+
+        //array.map
+        const trimStr = (...str) => str.map(el => el.trim());
+
+        console.log(trimStr('    Hello World       '));
+
+        //array.reduce
+        let cart = [
+            {
+                itemId: 1,
+                quantity: 2,
+                price: 120
+            },
+            {
+                itemId: 2,
+                quantity: 1,
+                price: 3
+            },
+            {
+                itemId: 3,
+                quantity: 3,
+                price: 43
+            },
+        ]
+        
+        console.log(cart.reduce((pValue, cValue) => {
+            let sum;
+            return {price: pValue.price + cValue.price,
+            quantity: pValue.quantity + cValue.quantity}
+        }));
+        
+
+        
+
+
+
+    </script>
+</body>
+
+</html>
