@@ -11,9 +11,38 @@
 <body>
 
 
-    
-    <script>
 
+    <script>
+        /*         const factory = (comp1, comp2) => {
+                    if (comp1 !== comp2 && comp1 !== undefined || comp2 !== undefined) {
+                        throw new Error(`A Gyártósor legyártotta ${comp1}-t és ${comp2}-t`);
+                    } else if (comp1 === undefined) {
+                        throw new Error(`1.-es rekesz üres`);
+                    } else if (comp2 === undefined) {
+                        throw new Error(`2.-es rekesz üres`);
+                    } else if (comp1 === undefined && comp2 === undefined) {
+                        throw new Error(`Mind a két rekesz üres`);
+                    } else if (comp1 === comp2) {
+                        throw new Error(`Mind a két rekeszben ugyan az található`);
+                    }
+                };
+        
+                try {
+                    console.log(factory('körte', 'alma'));
+                } catch (error) {
+                    console.log(error);
+                } */
+
+
+
+
+        const phoneValidate = (num) => {
+            if (num[0] === '+' && !isNaN(num.slice(1))) console.log();
+        }
+        phoneValidate('+3630134334');     
+        phoneValidate(null);              
+        phoneValidate('342094994');       
+        phoneValidate('+36abac2314'); 
     </script>
 </body>
 
