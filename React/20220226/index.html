@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./react main/react.development.js"></script>
+    <script src="./react main/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="reactContainer"></div>
+
+    <div id="image"></div>
+    <div id="paragraphs"></div>
+    <div id="paragraphs2"></div>
+
+    <script type="text/babel">
+        const reactContainer = document.querySelector('#reactContainer');
+        const helloPElement = React.createElement('p', {
+            id: 'p__elem',
+        }, "Hello P Element");
+
+        ReactDOM.render(helloPElement, reactContainer);
+
+
+        const element = <ul><li>Hello LI</li></ul>;
+        //console.log(element);
+
+        class ComponentElement extends React.Component {
+            render() {
+                return element
+            }
+        }
+
+        const reactElement = React.createElement(ComponentElement);
+
+        ReactDOM.render(reactElement, reactContainer);
+
+
+
+
+        /////////////////////////02.28.///////////////////////////
+
+        //1.
+        const myArticle = (
+            <article>
+                <h1> Cicás kép </h1>
+                <img src="http://placekitten.com/200/200" /><br />
+                <button>Push Me!</button>
+            </article>
+        );
+
+        ReactDOM.render(myArticle, document.querySelector('#image'));
+
+
+        const myParagraphs = (
+            <React.Fragment>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </React.Fragment>
+        );
+
+        ReactDOM.render(myParagraphs, document.querySelector('#paragraphs'));
+
+        const a = 5;
+        const b = 7;
+        const result = (
+            <div>
+                <span> {a * b} </span>
+            </div>
+        );
+
+        ReactDOM.render(result, document.querySelector('#paragraphs'));
+
+        let jsxDivElems = [];
+        for (let i = 0; i < 10; i++) {
+            jsxDivElems.push(<div>{i}</div>);
+        }
+
+        ReactDOM.render(jsxDivElems, document.querySelector('#paragraphs2'));
+
+
+        
+    </script>
+</body>
+
+</html>

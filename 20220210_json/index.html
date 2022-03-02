@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+
+
+    <script>
+        let users = '{"users": [' +
+            '{"id": 1,"name": "Kiss Jolan","email": "teszt@tesztmail.com"}, ' +
+            '{"id": 2,"name": "Nagy Elemer","email": "teszt2@tesztmail.com"}]}';
+
+        const obj = JSON.parse(users);
+
+        document.getElementById("demo").innerHTML += obj.users[0].name;
+        document.getElementById("demo").innerHTML += obj.users[1].name;
+    </script>
+</body>
+
+</html>

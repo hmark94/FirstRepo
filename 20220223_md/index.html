@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <form class="questions_input" method="PUT" action="https://6179a8bcaa7f340017404bde.mockapi.io/api/v1/question/20">
+            <label for="question">Kérdés:</label><br>
+            <input id="question" type="text" name="question" required><br>
+
+            <label for="answer_1">Válasz 1</label><br>
+            <input id="answer_1" type="text" name="answer_1" required><br>
+
+            <label for="answer_2">Válasz 2</label><br>
+            <input id="answer_2" type="text" name="answer_2" required><br>
+
+            <label for="answer_3">Válasz 3</label><br>
+            <input id="answer_3" type="text" name="answer_3" required><br>
+
+            <label for="answer_num">Jó válasz száma:</label>
+            <input id="answer_num" type="text" name="answer_num" required><br>
+
+            <button type="button" class="save_btn">Mentés</button>
+        </form>
+
+        <div class="question_box">
+            <div class="question_output"></div>
+            <div class="answer_out_1"></div>
+            <div class="answer_out_2"></div>
+            <div class="answer_out_3"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
