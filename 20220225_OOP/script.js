@@ -67,11 +67,11 @@ const Car = function (make, speed) {
     this.speed = speed;
 };
 
-Car.prototype.accelerate = function() {
+Car.prototype.accelerate = function () {
     this.speed += 10;
     console.log(`${this.make} is going ${this.speed}km/h`)
 };
-Car.prototype.brake = function() {
+Car.prototype.brake = function () {
     this.speed -= 5;
     console.log(`${this.make} is going ${this.speed}km/h`)
 };
@@ -93,8 +93,8 @@ bmw.brake(); */
 /////////////////////ES6 CLASSES
 
 class PersonCl {
-    constructor(firstName, birthYear) {
-        this.firstName = firstName;
+    constructor(fullName, birthYear) {
+        this.fullName = fullName;
         this.birthYear = birthYear;
     }
 
@@ -103,7 +103,7 @@ class PersonCl {
     }
 
     greet() {
-        console.log(`Hey ${this.firstName}`);
+        console.log(`Hey ${this.fullName}`);
     }
 
     get age() {
@@ -115,7 +115,7 @@ const jessica = new PersonCl('Jessica', 1996);
 //console.log(jessica);
 //console.log(jessica.age)
 
-Person.prototype.greet = function() {
+Person.prototype.greet = function () {
     console.log(`Hey ${this.firstName}`);
 };
 //jessica.greet();
@@ -142,5 +142,112 @@ account.latest = 50;
 const PersonProto = {
     calcAge() {
         console.log(2037 - this.birthYear);
+    },
+
+    init(firstName, birthYear) {
+        this.firstName = firstName;
+        this.birthYear = birthYear;
+    },
+}
+
+class StudentCl extends PersonCl {
+    constructor(fullName, birthYear, course) {
+        super(fullName, birthYear);
+        this.course = course;
+    }
+
+    introduce() {
+        console.log(`Hello ${this.fullName}`)
     }
 }
+
+const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
+console.log(martha);
+martha.introduce();
+
+const steven = Object.create(PersonProto)
+
+const StudentProto = Object.create(PersonProto);
+
+
+
+const jay = Object.create(StudentProto);
+
+class Account {
+    //Public fields
+    locale = navigator.language;
+    
+    //Private fields
+    #movements = [];
+    #pin;
+
+    
+    constructor(owner, currency, pin) {
+        this.owner = owner;
+        this.currency = currency;
+        //protected property
+        this.#pin = pin;
+        //this._movements = [];
+        //this.locale = navigator.language;
+
+        console.log(`Thanks for opening an account, ${owner}`);
+    }
+
+    getMovements() {
+        return this.#movements;
+    }
+
+    deposit(val) {
+        this.#movements.push(val);
+        return this;
+    }
+
+    withdraw(val) {
+        this.deposit(-val);
+        return this;
+    }
+
+    
+    requestLoan(val) {
+        if (this._approveLoan(val)) {
+            this.deposit(val);
+            console.log('Loan approved');
+            return this;
+        }
+    }
+
+    static helper() {
+        console.log('helper')
+    }
+    
+    //Private methods
+    //#approveLoan(val) {
+    _approveLoan(val) {
+    return true;
+    }
+
+}
+
+const acc1 = new Account('Jonas', 'EUR', 1111);
+
+//acc1.movements.push(250);
+//acc1.movements.push(-140);
+acc1.deposit(250);
+acc1.withdraw(140);
+acc1.requestLoan(1000);
+
+console.log(acc1);
+
+////DATA PRIVACY (ENCAPSULATION) Class Fields
+
+//Public Fields
+//Private Fields
+//Public methods
+//Private methods
+//console.log(acc1.#movements);
+//console.log(acc1.#pin);
+//console.log(acc1.#approveLoan(100));
+
+
+acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000);
+console.log(acc1.getMovements());
